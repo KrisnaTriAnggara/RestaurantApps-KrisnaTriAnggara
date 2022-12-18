@@ -1,0 +1,114 @@
+.restaurants {
+  display: grid;
+  grid-row-gap: 20px;
+}
+
+@media screen and (min-width: 650px) {
+  .restaurants {
+    grid-template-columns: 1fr 1fr;
+  }
+ 
+  .restaurant {
+    grid-template-columns: auto 1fr;
+  }
+ 
+  .restaurant .restaurant__title, .detail-menu, .review{
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+ 
+  .restaurant .restaurant__overview {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .detail-food{
+    grid-column-start: 1;
+  }
+
+  .detail-drink {
+    grid-column-start:2;
+  }
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 700px) {
+  .cafes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 10px;
+  }
+  .cafe-item__title{
+    font-size: 21px;
+  }
+  
+}
+
+@media screen and (min-width: 900px) {
+  .headline {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+  }
+
+  .cafes {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+      max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .header__menu {
+      display: none;
+  }
+}
+
+
+@media screen and (max-width: 499px) {
+  .nav {
+      z-index: 10;
+      background-color: #fff;
+      width: 90%;
+      position: absolute;
+
+      /* This trasform moves the drawer off canvas. */
+      -webkit-transform: translate(-100%, 0);
+      transform: translate(-100%, 0);
+
+      /* Optionally, we animate the drawer. */
+      transition: transform 0.3s ease;
+  }
+
+  .open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  .nav__item {
+      display: list-item;
+      border-bottom: 2px solid #E0E0E0;
+      width: 100%;
+      text-align: left;
+  }
+  .nav a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .nav__list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
